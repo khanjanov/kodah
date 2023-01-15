@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import "./mixins";
+@import "./colors";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header {
+  .container {
+    width: 100%;
+    @include d_flex_sb;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    .wrapper {
+      width: 100%;
+      @include d_flex_sb;
+      padding: 0 64px;
+      img {
+        display: none;
+      }
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 500;
+      font-family: $fam-Josef;
+    }
+    .navs {
+      @include d_flex_sb;
+      gap: 24px;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: $fam-Josef;
+      a {
+        color: $brand-color;
+      }
+    }
+  }
+}
+main {
+  .section1 {
+    .container {
+      width: 100%;
+      @include d_grid_2;
+      column-gap: 20px;
+      padding: 28px;
+      color: $brand-color;
+
+      &__item {
+        @include d_flex_fdc;
+        justify-content: center;
+        align-items: baseline;
+        row-gap: 52px;
+        padding: 52px;
+        h3 {
+          font-size: 64px;
+          font-weight: 500;
+          font-family: $fam-Josef;
+          line-height: 1.3;
+        }
+        h4 {
+          font-size: 32px;
+          font-weight: 600;
+          font-family: $fam-Josef;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          font-family: $fam-Open;
+          line-height: 1.8;
+          letter-spacing: 1px;
+          opacity: 0.8;
+          color: $brand-color;
+        }
+      }
+    }
+  }
+  .section2 {
+    .container {
+      width: 100%;
+      @include d_flex_fdc;
+      align-items: center;
+      color: $brand-color;
+      &__tittle {
+        padding: 20px;
+        h3 {
+          font-size: 56px;
+          font-weight: 500;
+          font-family: $fam-Josef;
+        }
+      }
+      &__cards {
+        @include d_grid_2;
+        gap: 32px;
+        margin-bottom: 60px;
+        h3 {
+          font-size: 24px;
+          font-family: $fam-Josef;
+          padding: 12px 0;
+        }
+        p {
+          font-size: 16px;
+          font-family: $fam-Open;
+          padding-bottom: 12px;
+          color: $third-color;
+        }
+      }
+      .button {
+        font-size: 20px;
+        font-family: $fam-Josef;
+        border: 2px solid $third-color;
+        display: inline;
+        padding: 14px 32px;
+        color: $third-color;
+      }
+    }
+  }
+  .section3 {
+    .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 12px;
+      padding: 90px;
+    }
+  }
+}
+footer {
+  .container {
+    width: 100%;
+    @include d_flex_sb;
+    .wrapper {
+      width: 100%;
+      @include d_flex_sb;
+      padding: 84px;
+      form {
+        @include d_flex_fdc;
+        gap: 16px;
+        label {
+          font-size: 18px;
+          font-family: $fam-Open;
+          color: $brand-color;
+        }
+        input {
+          padding: 12px 36px;
+          background-color: $sec-color;
+          border: 0;
+        }
+        button {
+          font-size: 20px;
+          font-family: $fam-Josef;
+          border: 2px solid $third-color;
+          padding: 12px 8px;
+          color: $third-color;
+        }
+      }
+      & div:nth-child(2) {
+        img {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
